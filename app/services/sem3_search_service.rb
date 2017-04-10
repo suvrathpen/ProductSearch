@@ -30,6 +30,11 @@ class Sem3SearchService
     if r['code'].eql?('OK')
       r['results']
     else
+      if r['message']
+        m = JSON.parse(r['message'])
+        Rails.logger.debug("\n+++ Sem3 API Error: #{m['message']} Code: #{m['code']} +++\n")
+      end
+
       []
     end
   end
