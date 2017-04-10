@@ -22,7 +22,7 @@
             | Price
 
       tbody
-        - @items['results'].each do |item|
+        - @items.each do |item|
           tr
             td
               = item['name']
@@ -30,4 +30,3 @@
               = link_to_retailer(item)
             td
               = "$ #{item['price']}"        
-              

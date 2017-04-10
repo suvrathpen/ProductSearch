@@ -6,6 +6,8 @@ class Sem3SearchService
   end
 
   def execute
+    return [] unless params[:search]
+
     setup
     construct_query
     get_products
@@ -23,6 +25,12 @@ class Sem3SearchService
   end
 
   def get_products
-    @sem3.get_products
+    r = @sem3.get_products()
+
+    if r['code'].eql?('OK')
+      r['results']
+    else
+      []
+    end
   end
 end
