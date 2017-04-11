@@ -25,6 +25,8 @@ class Sem3SearchService
   end
 
   def get_products
+    Rails.logger.info('+++ Sem3 API: Getting products... +++')
+
     r = @sem3.get_products()
 
     if r['code'].eql?('OK')
@@ -32,7 +34,7 @@ class Sem3SearchService
     else
       if r['message']
         m = JSON.parse(r['message'])
-        Rails.logger.debug("\n+++ Sem3 API Error: #{m['message']} Code: #{m['code']} +++\n")
+        Rails.logger.debug("+++ Sem3 API Error: #{m['message']} Code: #{m['code']} +++")
       end
 
       []
