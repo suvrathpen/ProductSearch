@@ -2,13 +2,13 @@ ProductSearch is a simple Rails application that enables a user to search Semant
 
 ---
 
-Live demo: [https://sem3-product-search.herokuapp.com/]()
+Live demo: https://sem3-product-search.herokuapp.com/
 
-Clone the repository at: [https://github.com/fingerprint/ProductSearch]()
+Clone the repository at: https://github.com/fingerprint/ProductSearch
 
 ### Prerequisites
 
-- You will need to create an account at Semantics3: [https://semantics3.com/start]().
+- You will need to create an account at Semantics3: https://semantics3.com/start
 
 - Once your account has been activated (email verification is required), add the API_KEY and API_SECRET to the .env file (see .env.sample in the root of project).
 
