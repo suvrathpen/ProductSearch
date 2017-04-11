@@ -1,23 +1,27 @@
-ProductSearch is a simple Rails application that allows users to search Semantics3's product database.
+ProductSearch is a simple Rails application that enables a user to search Semantics3's product database.
 
-Fork the repository at: https://github.com/fingerprint/ProductSearch
+---
 
-## Prerequisites
+Live demo: [https://sem3-product-search.herokuapp.com/]()
 
-- You will need to create an account at Semantics3 (https://semantics3.com/start).
+Clone the repository at: [https://github.com/fingerprint/ProductSearch]()
+
+### Prerequisites
+
+- You will need to create an account at Semantics3: [https://semantics3.com/start]().
 
 - Once your account has been activated (email verification is required), add the API_KEY and API_SECRET to the .env file (see .env.sample in the root of project).
 
-## Objective
+### Objective
 
 - Implement caching, where Semantics3 query responses are stored in a *SQL* database to speed-up subsequent searches (note: cache invalidation is not a requirement).
 
-- Implement unit testing.
+- Write unit tests.
 
-## Optionals
+### Optionals
 
-1. Use a JavaScript front-end framework (React, Vue.js, Angular, etc.)
+- Refactor the search view using a front-end JavaScript framework (React, Vue.js, or Angular).
 
-2. Implement a simple interface that allows an “admin” to review, add, or remove items from the cache.
+- Implement a simple interface that allows an “admin” to review, add, or remove items from the cache.
 
-3. Implement pagination.
+- Implement pagination.
