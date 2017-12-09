@@ -8,6 +8,7 @@ class ProductSearchController < ApplicationController
   	puts "Searching database is: "
   	# check if search matches with anything in database
   	search_result = Product.where("lower(name) LIKE ?", "%#{params[:search]}%")
+  	@database_search = false
   	puts search_result.blank?
   	if search_result.blank?
     	@items = Sem3SearchService.new(params).execute
@@ -20,6 +21,9 @@ class ProductSearchController < ApplicationController
 	    	product.retailer_name = item['sitedetails'].first['name']
 	    	product.save
 	    end
+	  else
+	  	@items = search_result
+	  	@database_search = true
 	  end
   end
 end

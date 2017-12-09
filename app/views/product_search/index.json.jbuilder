@@ -6,4 +6,5 @@ json.array! @items do |item|
     json.name item['sitedetails'].first['name']
     json.url item['sitedetails'].first['url']
   end
+
 end
