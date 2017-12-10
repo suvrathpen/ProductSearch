@@ -26,10 +26,11 @@
           tr
             td
               = item['name']
-            td
             - if @database_search
-              = link_to_retailerOne(item)
+              td
+                = link_to_retailerOne(item)
             - else
-              = link_to_retailer(item)
+              td
+                = link_to_retailer(item)
             td
               = "$ #{item['price']}"        
