@@ -16,7 +16,7 @@ class ProductSearchController < ApplicationController
 	    @items.each do |item|
 	    	product = Product.new
 	    	product.name = item['name']
-	   		product.price = item['price']
+	   		product.price = item['price'].to_f
 	    	product.link = item['sitedetails'].first['url']
 	    	product.retailer_name = item['sitedetails'].first['name']
 	    	product.save
