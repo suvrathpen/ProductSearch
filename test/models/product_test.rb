@@ -4,7 +4,7 @@
 #
 #  id            :integer          not null, primary key
 #  name          :string
-#  price         :string
+#  price         :decimal(, )
 #  link          :string
 #  retailer_name :string
 #  created_at    :datetime         not null

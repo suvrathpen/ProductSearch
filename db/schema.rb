@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20171208185055) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "price"
+    t.decimal "price"
     t.string "link"
     t.string "retailer_name"
     t.datetime "created_at", null: false
